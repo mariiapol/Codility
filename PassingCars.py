@@ -40,3 +40,22 @@ Write an efficient algorithm for the following assumptions:
 N is an integer within the range [1..100,000];
 each element of array A is an integer that can have one of the following values: 0, 1.
 """
+
+
+def solution(A):
+    
+    sum0 = 0
+    s = 0
+    for  i in range(0, len(A)):
+        if A[i] == 0:
+            # Counting all cars traveling east
+            sum0 += 1
+        else:
+            # Counting all passing cars
+            s += sum0
+    if s > 1000000000:
+        return -1
+    else: 
+        return s
+
+    pass
